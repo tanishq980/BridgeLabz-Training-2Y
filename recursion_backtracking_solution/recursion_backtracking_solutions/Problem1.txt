@@ -1,0 +1,22 @@
+Problem 1: Directory Size using Recursion
+
+a) Pseudocode:
+function getSize(dir):
+    if dir is file:
+        return file size   # Base case
+    total = 0
+    for each item in dir:
+        total += getSize(item)  # Recursive case
+    return total
+
+b) Execution:
+Sum = 100 + 50 + 10 + 200 + 20 = 380 KB
+
+c) Time Complexity:
+O(N) where N = number of files + directories
+
+d) Iterative Solution:
+Use Stack (DFS) or Queue (BFS)
+
+e) Cycle Handling:
+Use visited set to avoid infinite recursion
