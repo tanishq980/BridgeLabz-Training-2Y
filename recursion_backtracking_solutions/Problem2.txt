@@ -1,0 +1,28 @@
+Problem 2: Word Search (DREAM)
+
+a) Backtracking Pseudocode:
+function search(board, word, i, j, index):
+    if index == len(word):
+        return true
+    if out of bounds or mismatch:
+        return false
+
+    temp = board[i][j]
+    board[i][j] = '#'  # mark visited
+
+    for each direction:
+        if search(next cell):
+            return true
+
+    board[i][j] = temp  # backtrack
+    return false
+
+b) Path exists for DREAM
+
+c) Backtracking happens when mismatch occurs
+
+d) Time Complexity:
+O(N*M*4^L)
+
+e) To find all paths:
+Store results in list
